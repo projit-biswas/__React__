@@ -29,9 +29,9 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-screen h-screen">
+      <div className="flex flex-col items-center justify-center w-screen h-screen ">
         <h1 className='font-bold mb-10 text-3xl'>React Hooks</h1>
-        <div className="w-[300px] rounded-md border ">
+        <div className="w-[300px] rounded-md border bg-white shadow-red-400 ">
           <img
             src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
             alt="Laptop"
