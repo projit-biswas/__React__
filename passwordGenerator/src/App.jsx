@@ -50,7 +50,7 @@ function App() {
             ref={textRef}
           />
           <button
-            className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
+            className="outline-none bg-blue-700 hover:bg-blue-800 text-white px-3 py-0.5 shrink-0"
             onClick={copyToClipboard}
           >
             copy
