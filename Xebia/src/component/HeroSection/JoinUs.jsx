@@ -5,7 +5,8 @@ import Form from "./Form";
 function JoinUs() {
   const [showForm, setShowForm] = useState(false);
   const handelClick = () => {
-    setShowForm(true);
+    // setShowForm((prev)=> !prev);
+    setShowForm(!showForm);
   };
   return (
     <div className="w-screen bg-slate-500 h-[40vh] flex flex-col item-center p-8 justify-center">
@@ -19,11 +20,11 @@ function JoinUs() {
         voluptas accusantium, voluptatibus harum.
       </div>
       <div className="text-center mt-8">
-        <button 
-        onClick={handelClick} 
-        className="btn btn-active btn-neutral ">Join Us</button>
+        <button onClick={handelClick} className="btn btn-active btn-neutral ">
+          Join Us
+        </button>
       </div>
-      {showForm && <Form/>}
+      {showForm && <Form />}
     </div>
   );
 }
