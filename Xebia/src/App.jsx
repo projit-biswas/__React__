@@ -1,33 +1,25 @@
 import { useState } from "react";
-import Header from "./component/Homepage/Header.jsx";
+import Navbar from "./component/HeroSection/Navbar";
+import HeroComp from "./component/HeroSection/HeroComp"
 import "./App.css";
+import JoinUs from "./component/HeroSection/JoinUs";
+import Form from "./component/HeroSection/Form";
 
 function App() {
-  const [data, setData] = useState("");
-
-  const handelChange = (e) => {
-    console.log(e.target.value);
-    setData(e.target.value);
-  };
+ 
 
   return (
     <>
-      <div className="text-center mt-10 flex justify-center flex-col">
-        <h1 className="text-center text-3xl font-bold m-9 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
-          A Simple TODO
-        </h1>
-        <label>
-          TODO :
-          <input
-            className="border-[#9c9ca7] hover:border-dashed  border-2 rounded-md p-2 mx-2 w-72"
-            type="text"
-            value={data}
-            placeholder="Write a TODO"
-            onChange={handelChange}
-          />
-        </label>
-        <div>{data}</div>
-      </div>
+     <Navbar/>
+     <HeroComp h1='Our Journey' img="https://images.pexels.com/photos/19126536/pexels-photo-19126536/free-photo-of-rabbit-on-grass.jpeg"/>
+
+    <div className="my-8"><HeroComp h1="Our Values" img="https://images.pexels.com/photos/20640188/pexels-photo-20640188/free-photo-of-two-people-standing-in-a-field-holding-vegetables.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/></div>
+    <div className="my-8">
+    <HeroComp
+     h1="Why Choose Us" img="https://images.pexels.com/photos/1125850/pexels-photo-1125850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+    </div>
+    <JoinUs/>
+    
     </>
   );
 }
